@@ -1,0 +1,25 @@
+.form{
+    margin: auto;
+    width: 30%;
+}
+.error{
+    margin-top: 10px;
+    padding: 4px;
+    border-radius: 3px;
+    border: none;
+    background-color: #DC3545;
+    color: #ffffff;
+    font-size: 16px;
+}
+.submit{
+    margin-top: 10px;
+}
+
+.label{
+    color: white;
+    margin-left: 15px;
+}
+
+.buttons button{
+    width: 33%;
+}

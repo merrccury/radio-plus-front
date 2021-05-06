@@ -1,0 +1,24 @@
+.form{
+    margin: auto;
+}
+.error{
+    margin-top: 10px;
+    padding: 4px;
+    border-radius: 3px;
+    border: none;
+    background-color: #DC3545;
+    color: #ffffff;
+}
+.submit{
+    margin-top: 10px;
+}
+.label{
+    color: black;
+}
+.buttons{
+    display: flex;
+    justify-content: space-between;
+}
+.buttons button{
+    width: 33%;
+}

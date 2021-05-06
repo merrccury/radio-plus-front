@@ -1,25 +1,29 @@
-import logo from './logo.svg';
 import './App.css';
+import axios from 'axios';
+import {BrowserRouter, Switch} from "react-router-dom";
+import {Component} from "react";
+import PublicRoute from "./components/routers/PublicRout";
+import Login from "./components/login/login";
+import SignUp from "./components/sign-up/sign-up";
+import Store from "./redux/store";
+import {Provider} from "react-redux";
+
+const apiUrl = 'http://DESKTOP-V8HU7V3:3333';
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div className="App">
+            <BrowserRouter>
+                <Provider store={Store}>
+                    <Switch>
+                        <PublicRoute restricted={false} component={SignUp} path="/signup" exact/>
+                        <PublicRoute restricted={false} component={Login} path="/" exact/>
+                    </Switch>
+                </Provider>
+            </BrowserRouter>
+        </div>
+    );
 }
 
 export default App;
