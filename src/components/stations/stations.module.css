@@ -1,0 +1,97 @@
+.header {
+    padding-left: 100px;
+    padding-right: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header h1 {
+    width: 20vw;
+}
+
+.logo {
+    color: white;
+}
+
+.search {
+    border: none;
+    border-radius: 2px;
+    width: 20vw;
+}
+
+.search input {
+    border: none;
+    border-radius: 3px;
+    outline: none;
+}
+
+.searchCreateDiv {
+    display: flex;
+    flex-direction: column;
+}
+
+.searchBtm {
+    margin: 5px;
+}
+
+.stDashboard {
+    display: flex;
+    flex-direction: row;
+}
+
+.board {
+    background-color: #DC3545;
+    margin: 10px;
+}
+
+.boardTitle {
+    font-size: 30px;
+}
+
+.item {
+
+}
+.mainBoard{
+}
+
+.titleHeader {
+
+}
+.logoName{
+
+}
+.logoRadio{
+
+}
+
+@media (min-width: 320px) and (max-width: 800px) {
+
+    .titleHeader {
+        font-size: 40px;
+    }
+    .header{
+        padding-left: 10px;
+        padding-right: 10px;
+        margin-top: 70px;
+        flex-direction: column;
+        align-items: start;
+    }
+    .searchBtm {
+        margin: 5px;
+        width: 380px;
+    }
+    .logo{
+        margin: 0 0 0 0;
+        display: flex;
+        flex-direction: column;
+
+    }
+    .logoRadio {
+        font-size: 40px;
+    }
+    .logoName{
+        font-size: 30px;
+    }
+}

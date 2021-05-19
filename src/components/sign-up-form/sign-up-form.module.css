@@ -23,3 +23,10 @@
 .buttons button{
     width: 33%;
 }
+
+@media (min-width: 320px) and (max-width: 800px) {
+    .form{
+        margin: auto;
+        width: 90%;
+    }
+}

@@ -1,0 +1,49 @@
+.listOfStations{
+    height: 400px;
+    overflow: auto;
+
+}
+.station{
+    margin: 10px auto;
+    background-color: rgba(255,255,255,1);
+    width: 400px;
+    border-radius: 15px;
+    padding: 10px;
+}
+.station button {
+    /*border: solid black 1px;*/
+}
+.header{
+    color: white;
+}
+
+
+
+@media (min-width: 320px) and (max-width: 800px) {
+    .listOfStations{
+        height: 250px;
+        margin: 15px;
+        width: 380px;
+        display: flex;
+        flex-direction: row;
+        overflow-x: auto;
+    }
+    .station{
+        margin-right: 15px;
+        min-width: 320px;
+    }
+
+    .header{
+        margin: 10px;
+        font-size: 35px;
+    }
+    .blockHeader{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .blockHeader button {
+        margin-right: 20px;
+    }
+
+}

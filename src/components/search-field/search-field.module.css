@@ -1,0 +1,20 @@
+.form{
+    width: 100%;
+}
+
+.buttons{
+
+}
+
+.submit{
+
+}
+
+.inputs{
+    display: flex;
+    flex-direction: row;
+}
+.inputs div{
+    margin-left: 10px;
+    margin-right: 10px;
+}

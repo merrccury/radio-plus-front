@@ -1,0 +1,45 @@
+.header {
+    padding-left: 100px;
+    padding-right: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search {
+    border: none;
+    border-radius: 2px;
+    width: 30vw;
+}
+
+.dashboard {
+    display: flex;
+}
+
+.searchResult {
+    width: 30vw;
+    height: 90vh;
+    overflow: scroll;
+    overflow-x: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.searchResult button {
+    margin: 2px;
+
+}
+
+.artist {
+    width: 70vw;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.toast{
+    position: absolute;
+    z-index: 5;
+    width: 700px
+}

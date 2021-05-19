@@ -1,15 +1,15 @@
 import React from 'react';
 import {Route, Redirect} from 'react-router-dom';
-import {isLogin} from '../../utils/utils';
+import {isLogin, logout} from '../../utils/utils';
 
-const PrivateRoute = ({component: Component, ...rest}) => {
+const LogoutRouter = ({ ...rest}) => {
     return (
         <Route {...rest} render={props => (
-            isLogin() ?
-                <Component {...props} />
+            logout() ?
+                <Redirect to="/"/>
                 : <Redirect to="/"/>
         )}/>
     );
 };
 
-export default PrivateRoute;
+export default LogoutRouter;

@@ -6,14 +6,20 @@ import AuthHeader from "../auth-header/auth-header";
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
 import RestoreForm from "../restore-form/restore-form"
+import API from "../../utils/API";
+import { useHistory } from "react-router-dom";
+import {setCookie} from '../../utils/cookie'
+
 
 const Login = () => {
 
+    const authApi = API.auth;
+    const history = useHistory();
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
-    const submitLogInForm = (data) => {
+    const submitLogInForm = async (data) => {
         const {email, password} = data;
         if (!email)
             throw new SubmissionError({
@@ -23,11 +29,26 @@ const Login = () => {
             throw new SubmissionError({
                 password: "Enter your password"
             });
-        console.log(data);
+        const auth = await authApi.login(data);
+       // debugger;
+        if (auth.data.type === 'error'){
+            throw new SubmissionError({
+                _error: auth.data.data
+            });
+        }
+        else{
+            const accessToken = auth.data.data.accessToken;
+            const refreshToken = auth.data.data.refreshToken;
+            const roles = auth.data.data.roles;
+            setCookie('accessToken', accessToken);
+            setCookie('refreshToken', refreshToken);
+            setCookie('roles', roles);
+            history.push("/stations");
+        }
     };
 
-    const submitRestoreForm = (data) =>{
-         if (data.email === undefined)
+    const submitRestoreForm = (data) => {
+        if (data.email === undefined)
             throw new SubmissionError({
                 email: "Enter email address"
             });
@@ -46,7 +67,7 @@ const Login = () => {
                     <Modal.Title>Restore password</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-                    <RestoreForm onSubmit={submitRestoreForm} handleClose={handleClose} />
+                    <RestoreForm onSubmit={submitRestoreForm} handleClose={handleClose}/>
                 </Modal.Body>
             </Modal>
         </div>

@@ -1,0 +1,34 @@
+.artist {
+    display: flex;
+}
+
+.left {
+    background: rgba(103, 85, 64, 0.8);
+    height: 100vh;
+    width: 30vw;
+    text-align: center;
+    padding: 10px;
+}
+.left img{
+    margin-top: 20px;
+}
+.left h1 {
+    color: #dbcdc9;
+}
+
+.left p {
+    padding: 10px;
+    color: #e3d5c5;
+    height: 30vh;
+    overflow-x: hidden;
+
+}
+
+.right {
+    background: rgba(103, 85, 64, 0.9);
+    height: 100vh;
+    width: 70vw;
+}
+.right h1 {
+    color: #dbcdc9;
+}

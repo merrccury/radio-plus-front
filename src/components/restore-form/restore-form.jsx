@@ -25,7 +25,7 @@ const submitRestoreForm = (props) => {
     const errors = error ? error.split('|') : undefined;
     return (
         <form onSubmit={handleSubmit(onSubmit)} className={style.form}>
-            <Field name="email" placeholder="Email" type="email" validate={email} component={renderField}
+                <Field name="email" placeholder="Email" type="email" validate={email} component={renderField}
                    label="Enter your email to reset your password"/>
             {error && <small>{errors[0]}<strong>{errors[1]}</strong>{errors[2]}</small>}
             <div className={"text-center " + style.buttons}>

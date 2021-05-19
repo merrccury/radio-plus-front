@@ -28,8 +28,11 @@ const submitLogInForm = (props) => {
         <form onSubmit={handleSubmit(onSubmit)} className={style.form}>
             <Field name="email" placeholder="Email" type="email" validate={email} component={renderField} label="Email"/>
             <Field name="password" placeholder="Password" type="password" validate={password} component={renderField} label="Password"/>
-            {error && <strong>{error}</strong>}
-            <div className={"text-center " + style.buttons}>
+            {
+                error && <div className={style.error}>
+                    <small> {error}</small>
+                </div>
+            }            <div className={"text-center " + style.buttons}>
                 <button type="submit" className={"btn btn-light " + style.submit}>Log In</button>
                 <button type="button" onClick={handleShow} className={"btn btn-light " + style.submit}>Restore password</button>
 

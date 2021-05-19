@@ -1,0 +1,38 @@
+.btn {
+    margin: 2px;
+}
+
+.btn button img {
+    margin: 2px 15px 2px 2px;
+    border-radius: 2px;
+}
+
+.songsList {
+    display: flex;
+    flex-direction: column;
+}
+
+.songButton {
+    margin: 3px;
+}
+
+.audio {
+    margin: 20px auto auto;
+    width: 100%;
+}
+
+.itemSong {
+    display: grid;
+    grid-template-columns: 10fr 1fr 1fr;
+    grid-column-gap: 5px;
+}
+
+.addSongButton {
+    margin: 3px;
+
+}
+
+.removeSongButton {
+    margin: 3px;
+
+}

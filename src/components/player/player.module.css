@@ -1,0 +1,65 @@
+.player {
+    margin: auto;
+    position: absolute;
+    width: 400px;
+    height: 150px;
+    background-color: rgba(255,255,255,1);
+    bottom: 0;
+    left: 39.5%;
+    display: flex;
+    flex-direction: row;
+    border-radius: 15px;
+}
+.controls{
+    width: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.controls button{
+    border-radius: 5px;
+    border: 1px solid black;
+    width: 80px;
+}
+
+.cover{
+    height: 130px;
+    width: 130px;
+    margin: 10px;
+    border-radius: 5px;
+}
+.info{
+    width: 240px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.stationName{
+}
+.currentSong{
+    font-size: 20px;
+}
+.marquee {
+    overflow: hidden;
+    font-size: 0;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    white-space: nowrap;
+    cursor: default;
+    user-select: none;
+    width: 230px;
+}
+
+.marquee__inner {
+    font-size: 1.5rem;
+    white-space: nowrap;
+    display: inline-block;
+}
+@media (min-width: 320px) and (max-width: 800px) {
+    .player {
+        width: 100vw;
+        left: 0;
+    }
+}
